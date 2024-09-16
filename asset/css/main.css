@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(2, 2, 70);
+}
+header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(2, 2, 70);
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color:  white;
+}
+a:hover{
+    border: 20px;
+    padding: 10px;
+    background-color: white;
+    color: rgb(2, 2, 70);
+}
+main{
+    background-color:  rgb(2, 2, 70);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    padding-top: 43px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.logo img{
+    padding-top: 35px;
+    border-radius: 50%;
+    width: 35px;
+
+}
+.logo #text{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+nav{
+    padding-left: 60px;
+    padding: 43px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.userdefine{
+    padding: 43px;
+    padding-right: 5px;
+    display: flex;
+    justify-content:space-between;
+    gap: 30px;
+}
+.hero-section{
+    margin: 10px;
+    position: relative;
+}
+.hero-section img{
+    height: 650px;
+}
+.hero-content{
+    position: absolute;
+    top:120px;
+    left: 420px;
+    font-size: 35px;
+}
+article{
+    display: grid;
+}
+ article div div{
+    border-radius: 50px;
+    padding: 10px;
+    width: 30%;
+} 
+.a1{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.a2{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+article img{
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+}
+footer{
+    margin: 10px;
+    background-color: rgb(2, 2, 70);
+}
+.f1{
+    
+}
+.f2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+    padding: 10px;
+    color: gray;   
+}
+#hr1{
+    width: 300px;
+    position: absolute;
+    left: 600px;
+}
+.f3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 20px;
+    color: white;
+}
+.f4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 70px;
+}
