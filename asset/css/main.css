@@ -2,82 +2,110 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
-body{
-    background-color: rgb(2, 2, 70);
-}
-header{
-    height: 100px;
+
+/* =====================HERO SECTION========================= */
+
+.hero-section{
     width: 100%;
-    display: flex;
-    justify-content:space-between;
-    font-size: 16px;
+    height: 100vh;
+    background-image: url(/asset/images/batter-hitting-ball.jpg);
+    background-position: center;
+    background-size: cover;
     color: white;
-    background-color: rgb(2, 2, 70);
-    position: relative;
-}
-a{
-    text-decoration: none;
-    color:  white;
-}
-a:hover{
-    border: 20px;
-    padding: 10px;
-    background-color: white;
-    color: rgb(2, 2, 70);
-}
-main{
-    background-color:  rgb(2, 2, 70);
-}
-.navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
-.menu{
-    padding-top: 43px;
-    padding-left: 30px;
-    padding-right: 40px;
-}
-.logo{
+
+.hero-section .container{
+    width: 100%;
+    height: 100%;
+    background-color: #2121217d;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .container .text-content{
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 15px;
     gap: 20px;
 }
-.logo img{
-    padding-top: 35px;
-    border-radius: 50%;
-    width: 35px;
 
+.hero-section .container h1{
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1em;
 }
-.logo #text{
-    padding-top: 25px;
-    padding-bottom: 20px;
-    display: grid;
+
+.hero-section .container .searchbox{
+    background-color: white;
+    color: gray;
+    padding: 5px 5px 5px 15px;
+    display: flex;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
 }
-nav{
-    padding-left: 60px;
-    padding: 43px;
+
+.hero-section .container .searchbox img{
+    width: 17px;
+}
+
+.hero-section .container .searchbox input{
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+.hero-section .container .horizontal{
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 10px;
 }
-.userdefine{
-    padding: 43px;
-    padding-right: 5px;
+
+.hero-section .container .searchbox .search-button{
+    background-color: #212121;
+    padding: 8px;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.hero-section .container .searchbox .search-button:hover{
+    scale: .9;
+    box-shadow: 0 0 10px gray;
+}
+
+.hero-section .container .learn-more{
     display: flex;
-    justify-content:space-between;
-    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.148);
+    backdrop-filter: blur(10px);
+    padding: 10px 10px 10px 15px;
+    border-radius: 10px;
+    transition: all .2s;
+    cursor: pointer;
 }
-.hero-section{
-    margin: 10px;
-    position: relative;
+
+.hero-section .container .learn-more:hover{
+    background-color: rgba(255, 255, 255, 0.479);
+    /* color: #212121; */
 }
-.hero-section img{
-    height: 650px;
+
+.hero-section .container .learn-more img{
+    width: 20px;
 }
+
 .hero-content{
     position: absolute;
     top:120px;
