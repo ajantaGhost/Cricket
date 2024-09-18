@@ -106,68 +106,13 @@
     width: 20px;
 }
 
-.hero-content{
-    position: absolute;
-    top:120px;
-    left: 420px;
-    font-size: 35px;
-}
-article{
-    display: grid;
-}
- article div div{
-    border-radius: 50px;
-    padding: 10px;
-    width: 30%;
-} 
-.a1{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-.a2{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-article img{
-    aspect-ratio: 16/9;
+.hero-section .container hr{
     width: 100%;
-    object-fit: cover;
 }
-footer{
-    margin: 10px;
-    background-color: rgb(2, 2, 70);
-}
-.f1{
-    
-}
-.f2{
+
+.hero-section .container .carosel{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    height: 100px;
-    padding: 10px;
-    color: gray;   
-}
-#hr1{
-    width: 300px;
-    position: absolute;
-    left: 600px;
-}
-.f3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    gap: 20px;
-    color: white;
-}
-.f4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 70px;
+    gap: 15px;
 }
