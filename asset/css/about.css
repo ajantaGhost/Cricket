@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: 30px 90px 30px 90px;
+}
+.hero_img img{
+    aspect-ratio: 16/6;
+    border-radius: 10px;
+}
+.Story h2{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.Mission h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 20px;
+}
+.team p{
+    color: cadetblue;
+}
+.team h2{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.team h3{
+    margin-bottom: 10px;
+}
+.team{
+    display: grid;
+}
+.president {
+    display: flex;
+    justify-content: space-between;
+}
+.vice_president {
+    display: flex;
+    justify-content: space-between;
+}
+.team img{
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-right: 90px;
+    height: 50%;
+}
+.president img{
+    margin-bottom: 30px;
+}
+
+.vice_president img{
+    margin-top: 30px;
+}

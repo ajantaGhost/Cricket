@@ -8,11 +8,11 @@ body{
     height: 70vh;
     display: flex;
     justify-content: center;
-    background-color:white;
-    margin-top: 5%;
+    margin: 7%;
 }
 .Login_form{
-    background-color: aliceblue;
+    background-color:white;
+    opacity: 0.5;
     aspect-ratio: 10/16;
     display: grid;
     justify-content: center;
@@ -41,4 +41,8 @@ button{
 a{
     text-decoration: none;
     color:  rgb(6, 148, 204);
+}
+.pic{
+    height: 80vh;
+    width: 50vw;
 }
