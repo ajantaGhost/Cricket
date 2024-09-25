@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,9 +6,9 @@
 
 /* =====================HERO SECTION========================= */
 
-.hero-section{
+.hero-section {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-image: url(/asset/images/batter-hitting-ball.jpg);
     background-position: center;
     background-size: cover;
@@ -18,34 +18,41 @@
     align-items: center;
 }
 
-.hero-section .container{
+.hero-section .container {
     width: 100%;
     height: 100%;
-    background-color: #2121217d;
+    background-image: url(/asset/images/gradient.png);
+    background-size: contain;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
-.hero-section .container .text-content{
+.hero-section .container .text-content {
     max-width: 1000px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: start;
     padding: 15px;
     gap: 20px;
+    opacity: 0;
 }
 
-.hero-section .container h1{
+.hero-section .container h1 {
     font-weight: 500;
     font-size: 50px;
     line-height: 1em;
+    text-shadow: 0 0 10px #21212179;
 }
 
-.hero-section .container .searchbox{
+.hero-section .container .text-content>p {
+    text-shadow: 0 0 10px #212121;
+}
+
+.hero-section .container .searchbox {
     background-color: white;
     color: gray;
     padding: 5px 5px 5px 15px;
@@ -57,22 +64,22 @@
     box-shadow: 0 0 10px gray;
 }
 
-.hero-section .container .searchbox img{
+.hero-section .container .searchbox img {
     width: 17px;
 }
 
-.hero-section .container .searchbox input{
+.hero-section .container .searchbox input {
     outline: none;
     border: none;
     width: 200px;
 }
 
-.hero-section .container .horizontal{
+.hero-section .container .horizontal {
     display: flex;
     gap: 10px;
 }
 
-.hero-section .container .searchbox .search-button{
+.hero-section .container .searchbox .search-button {
     background-color: #212121;
     padding: 8px;
     height: 35px;
@@ -82,12 +89,12 @@
     transition: all .2s;
 }
 
-.hero-section .container .searchbox .search-button:hover{
+.hero-section .container .searchbox .search-button:hover {
     scale: .9;
     box-shadow: 0 0 10px gray;
 }
 
-.hero-section .container .learn-more{
+.hero-section .container .learn-more {
     display: flex;
     background-color: rgba(255, 255, 255, 0.148);
     backdrop-filter: blur(10px);
@@ -97,22 +104,414 @@
     cursor: pointer;
 }
 
-.hero-section .container .learn-more:hover{
+.hero-section .container .learn-more:hover {
     background-color: rgba(255, 255, 255, 0.479);
     /* color: #212121; */
 }
 
-.hero-section .container .learn-more img{
+.hero-section .container .learn-more img {
     width: 20px;
 }
 
-.hero-section .container hr{
+.hero-section .container hr {
     width: 100%;
 }
 
-.hero-section .container .carosel{
+.hero-section .container .carosel {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
+}
+
+@media(max-width: 700px) {
+    .hero-section {
+        height: 100vh;
+    }
+
+    .hero-section .container {
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .container h1 {
+        font-size: 6vw;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-section .container .text-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .container .text-content>p {
+        font-size: 3vw;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-section .container .horizontal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-section .container .searchbox {
+        width: 90%;
+    }
+
+    .hero-section .container .searchbox input {
+        width: 100%;
+        font-size: 3.5vw;
+    }
+
+    .hero-section .container .learn-more {
+        width: 90%;
+    }
+}
+
+/* ==============TOURNAMENT SECTION=================== */
+
+.tournaments {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournaments .container {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    padding: 15px;
+}
+
+.tournaments .container .text-container {
+    overflow: hidden;
+}
+
+.tournaments .container .text-container .text-appear {
+    line-height: 1em;
+}
+
+.tournaments .container .text-container h1 {
+    font-size: 7vw;
+}
+
+.tournaments h2 {
+    font-size: 3vw;
+    color: rgb(202, 202, 202);
+}
+
+.tournaments .container>p {
+    color: gray;
+}
+
+.tournaments .container p img {
+    height: 12px;
+}
+
+.tournaments .container {
+    overflow: hidden;
+    /* Hide overflow from the container */
+}
+
+.tournaments .container .scroller {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-block: 20px;
+}
+
+.tournaments .container .item {
+    min-width: 270px;
+    /* Set fixed width for items */
+    margin-right: 10px;
+    /* Spacing between items */
+    background-color: #f3f0e9;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all .2s;
+    position: relative;
+}
+
+.tournaments .container .item:hover {
+    background-color: #c3ff3d;
+}
+
+.tournaments .container .item a img {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.tournaments .container .item:hover a img {
+    opacity: 1;
+}
+
+.tournaments .container .item img {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Maintain square aspect ratio */
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.tournaments .container .item .text-content {
+    padding: 20px;
+}
+
+.tournaments .container .item .text-content .details-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tournaments .container .item .text-content img {
+    height: 24px;
+    width: 24px;
+    display: inline;
+}
+
+.tournaments .container .item .text-content span {
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tournaments .container .item .text-content h1 {
+    margin-top: 15px;
+    font-size: 3vw;
+    /* Responsive font size */
+    line-height: 1em;
+    font-weight: 600;
+    word-break: break-word;
+    /* Break long words if needed */
+}
+
+.tournaments .container .item .text-content .cssbuttons-io-button {
+    background: #313131;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em rgb(92, 92, 92);
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tournaments .container .item .text-content .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #313131;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.tournaments .container .item .text-content .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.tournaments .container .item .text-content .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #313131;
+}
+
+.tournaments .container .item .text-content .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.tournaments .container .item .text-content .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+@media(max-width: 700px) {
+    .tournaments .container .scroller {
+        flex-direction: column;
+    }
+}
+
+.register {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register .container {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.register .container .text-container {
+    overflow: hidden;
+}
+
+.register .container .text-container .text-appear {
+    line-height: 1em;
+}
+
+.register .container .text-container h1 {
+    font-size: 7vw;
+}
+
+.register h2 {
+    font-size: 3vw;
+    color: rgb(202, 202, 202);
+}
+
+.register .container>p {
+    color: gray;
+}
+
+.register .container p img {
+    height: 12px;
+}
+
+.register .register-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.register .register-content img {
+    width: 30%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.register .register-content .text-content {
+    width: 60%;
+}
+
+.register .register-content .text-content>p {
+    color: gray;
+}
+
+.register .animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: rgb(117, 190, 9);
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-top: 20px;
+}
+
+.register .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.register .animated-button .arr-1 {
+    right: 16px;
+}
+
+.register .animated-button .arr-2 {
+    left: -25%;
+}
+
+.register .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.register .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.register .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+}
+
+.register .animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.register .animated-button:hover .arr-2 {
+    left: 16px;
+}
+
+.register .animated-button:hover .text {
+    transform: translateX(12px);
+}
+
+.register .animated-button:hover svg {
+    fill: #212121;
+}
+
+.register .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+}
+
+.register .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
 }
