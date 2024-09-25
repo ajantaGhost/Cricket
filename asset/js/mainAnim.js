@@ -2,16 +2,12 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector("body"),
     smooth: true
 });
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
 locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "body" element since Locomotive Scroll is hijacking things
 ScrollTrigger.scrollerProxy("body", {
     scrollTop(value) {
         return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
@@ -49,7 +45,7 @@ texts.forEach(text => {
 
     let timeline = anime.timeline({
         loop: false,
-        autoplay: false // Set autoplay to false for manual control
+        autoplay: false,
     });
 
     timeline.add({
@@ -66,31 +62,27 @@ texts.forEach(text => {
     let observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                timeline.play(); // Start the animation when the text is in view
-                observer.unobserve(entry.target); // Stop observing after animation has started
+                timeline.play();
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.2 // Adjust this value for when you want the animation to trigger
+        threshold: 0.2
     });
 
-    // Start observing the current text element
     observer.observe(text);
 });
 
-// Fade in items from the bottom using Anime.js
 const items = document.querySelectorAll(".tournaments .container .item");
-
-// Function to trigger animation
 function fadeInItems() {
     items.forEach((item, index) => {
         anime({
             targets: item,
-            translateY: [100, 0], // Start from 100 pixels down
-            opacity: [0, 1], // Start fully transparent
-            duration: 1000, // Duration of the animation
+            translateY: [100, 0],
+            opacity: [0, 1],
+            duration: 1000,
             easing: "easeOutExpo",
-            delay: index * 200, // Stagger the animation
+            delay: index * 200,
         });
     });
 }
@@ -99,35 +91,17 @@ function fadeInItems() {
 let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            fadeInItems(); // Start the fade-in animation when the items are in view
-            observer.unobserve(entry.target); // Stop observing after the animation has started
+            fadeInItems();
+            observer.unobserve(entry.target); 
         }
     });
 }, {
-    threshold: 0.2 // Adjust as needed
+    threshold: 0.2
 });
 
 // Observe the tournament section
 const tournamentSection = document.querySelector(".tournaments .container");
 observer.observe(tournamentSection);
 
-// // --- RED PANEL ---
-// gsap.from(".line-1", {
-//   scrollTrigger: {
-//     trigger: ".line-1",
-//     scroller: "body",
-//     scrub: true,
-//     start: "top bottom",
-//     end: "top top",
-//     onUpdate: self => console.log(self.direction)
-//   },
-//   scaleX: 0,
-//   transformOrigin: "left center", 
-//   ease: "none"
-// });
-
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();

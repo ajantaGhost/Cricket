@@ -1,3 +1,4 @@
+// change hero section background image after fixed interevals
 const heroContent = [
     {
         "text": "Find Tournaments and Join to play",
@@ -28,5 +29,16 @@ function displayText() {
 
     currentIndex = (currentIndex + 1) % heroContent.length;
 }
-
 setInterval(displayText, 4000);
+
+
+// open links with button is clicked
+const learnMoreBtn = document.querySelector(".hero-section .container .learn-more");
+learnMoreBtn.onclick = () => {
+    window.location.href = "/asset/html/about.html";
+}
+
+const registerBtn = document.querySelector(".register .animated-button");
+registerBtn.onclick = () => {
+    window.location.href = "/asset/html/login.html";
+}

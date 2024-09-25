@@ -120,6 +120,12 @@ body {
     font-style: italic;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* =========================HEADER=========================== */
 
 header{
@@ -130,6 +136,7 @@ header{
     align-items: center;
     padding-block: 20px;
     padding-inline: 20px;
+    z-index: 999;
 }
 
 header .logo{
@@ -161,8 +168,56 @@ header ul li{
     list-style: none;
 }
 
+header a{
+    color: white;
+    text-decoration: none;
+}
+
 @media(max-width: 700px){
     header ul{
         display: none;
+    }
+}
+
+/* ======================FOOTER========================== */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+    color: white;
+    margin-top: 70px;
+}
+
+footer .container{
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    padding: 15px;
+    margin-block: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+footer .container .logo{
+    width: 50px;
+}
+
+footer h1, footer h2{
+    font-weight: 500;
+}
+
+footer h2{
+    margin-top: 50px;
+}
+
+footer a{
+    color: gray;
+}
+
+@media(max-width: 700px){
+    footer .container{
+        flex-direction: column;
     }
 }

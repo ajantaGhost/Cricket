@@ -16,17 +16,19 @@
 </head>
 
 <body>
+    <!-- ================HEADER================== -->
     <header>
         <div class="container">
             <img src="/asset/cricketFavicon/android-chrome-192x192.png" alt="" class="logo">
             <ul>
-                <li>Home</li>
-                <li>Tournaments</li>
-                <li>About Us</li>
+                <a href="/index.html"><li>Home</li></a>
+                <a href="/index.html#tournaments"><li>Tournaments</li></a>
+                <a href="/asset/html/about.html"><li>About Us</li></a>
             </ul>
         </div>
     </header>
     <main>
+        <!-- ==================HERO SECTION===================== -->
         <section class="hero-section">
             <div class="container">
                 <div class="text-content" data-scroll data-scroll-speed="1.5">
@@ -54,8 +56,9 @@
             </div>
         </section>
 
+        <!-- =====================TOURNAMENT SECTION======================== -->
         <section class="tournaments">
-            <div class="container">
+            <div class="container" id="tournaments">
                 <div class="text-container">
                     <h2 class="text-appear">JOIN</h2>
                 </div>
@@ -195,6 +198,7 @@
             </div>
         </section>
 
+        <!-- ====================REGISTER SECTION======================== -->
         <section class="register">
             <div class="container">
                 <div class="text-container">
@@ -231,6 +235,30 @@
             </div>
         </section>
     </main>
+    <!-- ===============FOOTER SECTION=================== -->
+    <footer>
+        <div class="container">
+            <div>
+                <img src="/asset/cricketFavicon/android-chrome-192x192.png" alt="" class="logo">
+                <h1>Cricket XYZ</h1>
+                <p>Join or create your own cricket tournaments effortlessly with our platform. Compete in local leagues,
+                    track scores, and manage teams with ease. Whether you're a player or organizer, we've got all the
+                    tools you need to enjoy the game!</p>
+            </div>
+            <div>
+                <h2>Important Links</h2>
+                <a href="/index.html">
+                    <p>Home</p>
+                </a>
+                <a href="/asset/html/about.html">
+                    <p>About Us</p>
+                </a>
+                <a href="/index.html#tournaments">
+                    <p>Tournaments</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
