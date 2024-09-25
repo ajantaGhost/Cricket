@@ -30,3 +30,8 @@ function displayText() {
 }
 
 setInterval(displayText, 4000);
+
+const registerBtn = document.querySelector(".register .animated-button");
+registerBtn.onclick = () => {
+    window.location.href = "/asset/html/login.html"
+}
