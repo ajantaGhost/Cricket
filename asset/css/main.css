@@ -360,12 +360,22 @@
 @media(max-width: 700px) {
     .tournaments .container .scroller {
         flex-direction: column;
+        gap: 10px;
+    }
+    .tournaments h2{
+        font-size: 5vw;
+    }
+    .tournaments .container .text-container h1{
+        font-size: 9vw;
+    }
+
+    .tournaments .container .item .text-content h1{
+        font-size: 7vw;
     }
 }
 
 .register {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,6 +387,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 15px;
 }
 
 .register .container .text-container {
@@ -514,4 +525,27 @@
     width: 220px;
     height: 220px;
     opacity: 1;
+}
+
+@media(max-width: 700px){
+    .register .container .text-container h1 {
+        font-size: 9vw;
+    }
+    
+    .register h2 {
+        font-size: 5vw;
+    }
+
+    .register .register-content{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .register .register-content img{
+        width: 100%;
+    }
+
+    .register .register-content .text-content{
+        width: 90%;
+    }
 }
