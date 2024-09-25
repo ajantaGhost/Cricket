@@ -4,6 +4,8 @@ body{
     width: 100%;
 }
 
+/* ==========PICTURE=============== */
+
 .pic{
     width: 50%;
     height: 100%;
@@ -14,6 +16,8 @@ body{
     width: 100%;
     object-fit: cover;
 }
+
+/* ===============LOGIN AREA=================== */
 
 .Login_form{
     display: flex;
