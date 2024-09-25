@@ -120,6 +120,12 @@ body {
     font-style: italic;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* =========================HEADER=========================== */
 
 header{
@@ -130,6 +136,7 @@ header{
     align-items: center;
     padding-block: 20px;
     padding-inline: 20px;
+    z-index: 999;
 }
 
 header .logo{
@@ -161,11 +168,18 @@ header ul li{
     list-style: none;
 }
 
+header a{
+    color: white;
+    text-decoration: none;
+}
+
 @media(max-width: 700px){
     header ul{
         display: none;
     }
 }
+
+/* ======================FOOTER========================== */
 
 footer{
     display: flex;

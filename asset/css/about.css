@@ -1,57 +1,66 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header a{
+    color: black;
 }
-main{
-    margin: 30px 90px 30px 90px;
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 15px;
 }
-.hero_img img{
+
+.hero_img img {
     aspect-ratio: 16/6;
     border-radius: 10px;
+    object-fit: cover;
+    margin-top: 20px;
 }
-.Story h2{
+
+.Story h2 {
     margin-top: 40px;
     margin-bottom: 10px;
 }
-.Mission h2{
+
+.Mission h2 {
     margin-top: 30px;
     margin-bottom: 10px;
 }
-p{
+/* 
+p {
     font-size: 20px;
+} */
+
+.team h2 {
+    margin-top: 40px;
 }
-.team p{
+
+.team p:nth-child(2) {
+    margin-bottom: 20px;
     color: cadetblue;
 }
-.team h2{
-    margin-top: 40px;
-    margin-bottom: 20px;
+.team > div{
+    display: flex;
+    align-items: center;
 }
-.team h3{
-    margin-bottom: 10px;
-}
-.team{
-    display: grid;
-}
+
 .president {
     display: flex;
     justify-content: space-between;
 }
+
 .vice_president {
     display: flex;
     justify-content: space-between;
 }
-.team img{
+
+.team img {
     border-radius: 50px;
     margin-left: 30px;
     margin-right: 90px;
-    height: 50%;
-}
-.president img{
-    margin-bottom: 30px;
+    height: 200px;
+    object-fit: cover;
 }
 
-.vice_president img{
+.vice_president img {
     margin-top: 30px;
 }
